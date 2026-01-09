@@ -9,7 +9,7 @@ function getWord() {
 }
 
 function App() {
-  const [wordToGuess, setWordToGuess] = useState((getWord) => {
+  const [wordToGuess, setWordToGuess] = useState<string>(() => {
     return words[Math.floor(Math.random() * words.length)];
   });
   const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
